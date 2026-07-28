@@ -1,8 +1,15 @@
 ---
-title: 《前端fetch请求大模型API踩坑汇总》
+title: 前端fetch请求大模型API踩坑汇总
 date: 2026-05-19 23:55:28
-tags: [前端, React, Vue, Hexo, Xumin, 熊猫, 项目]
-cover: /img/cat.jpg
+categories:
+  - AI专栏
+tags:
+  - 实操
+  - 前端
+  - 大模型
+  - 避坑指南
+top_img: /img/bj.jpg
+cover: /img/4.jpg
 ---
 
 《前端fetch请求大模型API踩坑汇总》

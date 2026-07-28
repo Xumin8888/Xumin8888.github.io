@@ -1,8 +1,15 @@
 ---
-title: 《多模型 AI 问答（全文  FAISS 向量双检索 + 多 PDF 上传）》
+title: 多模型 AI 问答｜全文 / FAISS 向量双检索 + 多 PDF 上传
 date: 2026-06-02 15:30:00
-tags: [Python, Flask, Vue, 大模型API]
-cover: /img/cat.jpg
+categories:
+  - AI专栏
+tags:
+  - 实战
+  - 向量数据库
+  - FAISS
+  - 双模式检索
+top_img: /img/bj.jpg
+cover: /img/4.jpg
 ---
 
 # 《多模型 AI 问答（全文 / FAISS 向量双检索 + 多 PDF 上传）》

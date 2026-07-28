@@ -1,7 +1,14 @@
 ---
-title: 《AI 多模型问答项目 开发修改 + GitHub 开源全流程总结》
+title: AI 多模型问答项目 开发修改 + GitHub 开源全流程总结
 date: 2026-06-07 09:30:00
-tags: [Python, Flask, Vue, 大模型API]
+categories:
+  - AI专栏
+tags:
+  - 实战
+  - 项目
+  - 开源
+  - GitHub
+top_img: /img/bj.jpg
 cover: /img/cat.jpg
 ---
 

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/demos/sellH5-project/assets/uni.1d149769.css">
+
+    <meta charset="UTF-8" />
+    <script>
+      var coverSupport = 'CSS' in window && typeof CSS.supports === 'function' && (CSS.supports('top: env(a)') ||
+        CSS.supports('top: constant(a)'))
+      document.write(
+        '<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' +
+        (coverSupport ? ', viewport-fit=cover' : '') + '" />')
+    </script>
+    <title>sell</title>
+    <!--preload-links-->
+    <!--app-context-->
+    <script type="module" crossorigin src="/demos/sellH5-project/assets/index-BHMLsMT0.js"></script>
+    <link rel="stylesheet" crossorigin href="/demos/sellH5-project/assets/index-yksqsBZR.css">
+  </head>
+  <body>
+    <div id="app"><!--app-html--></div>
+  
+<script>
+(function() {
+    function handleError(img) {
+        if (img.dataset.placeholder) return;
+        img.dataset.placeholder = 'true';
+        var w = img.naturalWidth || img.width || 400;
+        var h = img.naturalHeight || img.height || 300;
+        var seed = Math.floor(Math.random() * 1000);
+        img.src = 'https://picsum.photos/seed/' + seed + '/' + w + '/' + h;
+        img.style.objectFit = 'cover';
+    }
+    
+    document.addEventListener('error', function(e) {
+        if (e.target.tagName === 'IMG') {
+            handleError(e.target);
+        }
+    }, true);
+    
+    var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            mutation.addedNodes.forEach(function(node) {
+                if (node.tagName === 'IMG') {
+                    node.addEventListener('error', function() { handleError(node); });
+                    if (node.complete && !node.naturalWidth) {
+                        handleError(node);
+                    }
+                } else if (node.querySelectorAll) {
+                    node.querySelectorAll('img').forEach(function(img) {
+                        img.addEventListener('error', function() { handleError(img); });
+                        if (img.complete && !img.naturalWidth) {
+                            handleError(img);
+                        }
+                    });
+                }
+            });
+        });
+    });
+    
+    observer.observe(document.documentElement, { childList: true, subtree: true });
+    
+    document.querySelectorAll('img').forEach(function(img) {
+        img.addEventListener('error', function() { handleError(img); });
+        if (img.complete && !img.naturalWidth) {
+            handleError(img);
+        }
+    });
+    
+    var style = document.createElement('style');
+    style.textContent = 'img[src*="picsum.photos"] { background: #f0f0f0; }';
+    document.head.appendChild(style);
+})();
+</script>
+</body>
+</html>

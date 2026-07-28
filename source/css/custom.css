@@ -1,0 +1,188 @@
+
+.layout > div:first-child:not(.nc),
+#recent-posts .recent-post-item,
+#aside-content .card-widget,
+.layout .pagination > *:not(.space) {
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08) !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.layout > div:first-child:not(.nc):hover,
+#recent-posts .recent-post-item:hover,
+#aside-content .card-widget:hover,
+.layout .pagination > *:not(.space):hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12) !important;
+  transform: translateY(-2px);
+}
+
+#page-header {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#site-title {
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  letter-spacing: 2px;
+}
+
+#site-subtitle {
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.8) !important;
+}
+
+#nav.show {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+#aside-content .card-info .card-info-data > a .headline {
+  transition: all 0.3s ease;
+}
+
+#aside-content .card-info .card-info-data > a:hover .headline {
+  color: #49b1f5;
+  transform: scale(1.1);
+}
+
+#post-info .post-title {
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+#post-content {
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px !important;
+}
+
+.post-copyright {
+  background: rgba(73, 177, 245, 0.05) !important;
+  border-radius: 8px;
+  border-left: 4px solid #49b1f5;
+}
+
+#footer {
+  background: rgba(255, 255, 255, 0.6) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+#rightside > div > button,
+#rightside > div > a {
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#sidebar-menus {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.9) !important;
+}
+
+.menus_items .site-page {
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.menus_items .site-page:hover {
+  background: rgba(73, 177, 245, 0.1);
+  transform: translateX(5px);
+}
+
+#article-container pre,
+#article-container figure.highlight {
+  border-radius: 10px !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+#article-container code {
+  border-radius: 4px;
+}
+
+blockquote {
+  border-radius: 8px !important;
+  transition: all 0.3s ease;
+}
+
+blockquote:hover {
+  box-shadow: 0 4px 15px rgba(73, 177, 245, 0.15);
+  transform: translateX(3px);
+}
+
+.search-dialog {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+#toast-container .toast {
+  border-radius: 10px !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.pagination-related {
+  border-radius: 12px !important;
+  overflow: hidden;
+}
+
+.relatedPosts .relatedPosts-list .content {
+  border-radius: 10px !important;
+  overflow: hidden;
+}
+
+div#note-container .note {
+  border-radius: 8px !important;
+}
+
+[data-theme='dark'] .layout > div:first-child:not(.nc),
+[data-theme='dark'] #recent-posts .recent-post-item,
+[data-theme='dark'] #aside-content .card-widget,
+[data-theme='dark'] .layout .pagination > *:not(.space) {
+  background: rgba(28, 28, 28, 0.85) !important;
+}
+
+[data-theme='dark'] #post-content {
+  background: rgba(28, 28, 28, 0.85) !important;
+}
+
+[data-theme='dark'] #nav {
+  background: rgba(28, 28, 28, 0.8) !important;
+}
+
+[data-theme='dark'] #nav.show {
+  background: rgba(28, 28, 28, 0.9) !important;
+}
+
+[data-theme='dark'] #footer {
+  background: rgba(28, 28, 28, 0.6) !important;
+}
+
+[data-theme='dark'] #sidebar-menus {
+  background: rgba(28, 28, 28, 0.9) !important;
+}
+
+[data-theme='dark'] .search-dialog {
+  background: rgba(28, 28, 28, 0.95) !important;
+}
+
+[data-theme='dark'] #rightside > div > button,
+[data-theme='dark'] #rightside > div > a {
+  background: rgba(28, 28, 28, 0.85) !important;
+}

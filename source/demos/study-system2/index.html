@@ -1,0 +1,54 @@
+<!doctype html><html lang=""><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/demos/study-system2/zhihuix.ico"><title>course</title><script defer="defer" src="/demos/study-system2/static/js/chunk-vendors.0448dcf5.js"></script><script defer="defer" src="/demos/study-system2/static/js/app.8d2d5eaa.js"></script><link href="/demos/study-system2/static/css/chunk-vendors.a99fd060.css" rel="stylesheet"><link href="/demos/study-system2/static/css/app.61462309.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but course doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"></div>
+<script>
+(function() {
+    function handleError(img) {
+        if (img.dataset.placeholder) return;
+        img.dataset.placeholder = 'true';
+        var w = img.naturalWidth || img.width || 400;
+        var h = img.naturalHeight || img.height || 300;
+        var seed = Math.floor(Math.random() * 1000);
+        img.src = 'https://picsum.photos/seed/' + seed + '/' + w + '/' + h;
+        img.style.objectFit = 'cover';
+    }
+    
+    document.addEventListener('error', function(e) {
+        if (e.target.tagName === 'IMG') {
+            handleError(e.target);
+        }
+    }, true);
+    
+    var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            mutation.addedNodes.forEach(function(node) {
+                if (node.tagName === 'IMG') {
+                    node.addEventListener('error', function() { handleError(node); });
+                    if (node.complete && !node.naturalWidth) {
+                        handleError(node);
+                    }
+                } else if (node.querySelectorAll) {
+                    node.querySelectorAll('img').forEach(function(img) {
+                        img.addEventListener('error', function() { handleError(img); });
+                        if (img.complete && !img.naturalWidth) {
+                            handleError(img);
+                        }
+                    });
+                }
+            });
+        });
+    });
+    
+    observer.observe(document.documentElement, { childList: true, subtree: true });
+    
+    document.querySelectorAll('img').forEach(function(img) {
+        img.addEventListener('error', function() { handleError(img); });
+        if (img.complete && !img.naturalWidth) {
+            handleError(img);
+        }
+    });
+    
+    var style = document.createElement('style');
+    style.textContent = 'img[src*="picsum.photos"] { background: #f0f0f0; }';
+    document.head.appendChild(style);
+})();
+</script>
+</body></html>

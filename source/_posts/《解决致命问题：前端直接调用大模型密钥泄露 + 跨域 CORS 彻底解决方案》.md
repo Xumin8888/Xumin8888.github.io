@@ -1,7 +1,14 @@
 ---
-title: 《解决致命问题：前端直接调用大模型密钥泄露 + 跨域 CORS 彻底解决方案》
+title: 解决致命问题：前端直接调用大模型密钥泄露 + 跨域 CORS 彻底解决方案
 date: 2026-06-05 08:20:00
-tags: [Python, Flask, Vue, 大模型, 跨域安全]
+categories:
+  - AI专栏
+tags:
+  - 实操
+  - 跨域安全
+  - 密钥保护
+  - 后端代理
+top_img: /img/bj.jpg
 cover: /img/cat.jpg
 ---
 

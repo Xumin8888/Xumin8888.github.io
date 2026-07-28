@@ -1,8 +1,15 @@
 ---
-title: 《全文检索 VS FAISS 向量检索》
+title: 全文检索 VS FAISS 向量检索
 date: 2026-06-03 00:30:00
-tags: [Python, Flask, Vue, 大模型API]
-cover: /img/cat.jpg
+categories:
+  - AI专栏
+tags:
+  - 实操
+  - 向量数据库
+  - RAG
+  - FAISS
+top_img: /img/bj.jpg
+cover: /img/1.jpg
 ---
 
 # 《全文检索 VS FAISS 向量检索》

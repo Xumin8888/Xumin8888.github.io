@@ -1,8 +1,15 @@
 ---
-title: 《手把手给 Hexo 博客接入 AI 对话机器人》
+title: 手把手给 Hexo 博客接入 AI 对话机器人
 date: 2026-05-18 23:55:28
-tags: [前端, React, Vue, Hexo, Xumin, 熊猫, 项目]
-cover: /img/cat.jpg
+categories:
+  - AI专栏
+tags:
+  - 实操
+  - Hexo
+  - AI对话
+  - 大模型
+top_img: /img/bj.jpg
+cover: /img/3.jpg
 ---
 
 手把手给 Hexo 博客接入 AI 对话机器人
@@ -69,10 +76,174 @@ cover: /img/cat.jpg
 3. **缺少 url() 引号** 导致 Hexo 直接 FATAL 报错
 4. 直接前端请求 API 存在**跨域风险**
 
-## 五、总结
+## 五、进阶优化方向
+
+基础版的 AI 对话机器人已经能用了，但还有很多可以优化的地方。这里给大家提供几个进阶优化方向。
+
+### 5.1 上下文记忆：让 AI 记住你说过的话
+
+基础版每次对话都是独立的，AI 记不住之前的内容。要实现多轮对话，需要把历史消息一起发给大模型。
+
+```javascript
+// 存储对话历史
+const chatHistory = [];
+
+// 发送消息时，带上历史记录
+async function sendMsg() {
+  const val = input.value.trim();
+  if (!val) return;
+
+  // 添加用户消息到历史
+  chatHistory.push({ role: 'user', content: val });
+
+  // ... UI 渲染 ...
+
+  try {
+    const res = await fetch("你的API地址", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        messages: chatHistory,  // 发送完整历史
+        max_tokens: 1000
+      })
+    });
+
+    const data = await res.json();
+    // 添加 AI 回复到历史
+    chatHistory.push({ role: 'assistant', content: data.content });
+
+    // ... 渲染回复 ...
+  } catch (err) {
+    // 错误处理
+  }
+}
+```
+
+> 注意：历史消息太多会消耗更多 token，建议只保留最近 10-20 轮对话，或者做摘要压缩。
+
+### 5.2 流式输出：打字机效果提升体验
+
+现在很多大模型 API 都支持流式输出（stream），可以让回复一个字一个字地「蹦」出来，体验好很多。
+
+实现思路：
+1. 请求时加上 `stream: true` 参数
+2. 使用 `ReadableStream` 逐块读取响应
+3. 实时更新到页面上
+
+```javascript
+// 流式输出示例
+async function sendMsgStream() {
+  const response = await fetch("你的API地址", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      message: val,
+      stream: true
+    })
+  });
+
+  const reader = response.body.getReader();
+  const decoder = new TextDecoder();
+  let result = '';
+
+  while (true) {
+    const { done, value } = await reader.read();
+    if (done) break;
+
+    const chunk = decoder.decode(value);
+    // 解析 SSE 格式的流式数据
+    const lines = chunk.split('\n');
+    for (const line of lines) {
+      if (line.startsWith('data: ')) {
+        const data = line.slice(6);
+        if (data === '[DONE]') continue;
+        try {
+          const json = JSON.parse(data);
+          const content = json.choices?.[0]?.delta?.content || '';
+          result += content;
+          // 实时更新到页面
+          aiMessageElement.innerHTML = result;
+        } catch (e) {}
+      }
+    }
+  }
+}
+```
+
+### 5.3 接口代理：解决密钥泄露和跨域问题
+
+**重要提醒**：上面的代码是直接前端调用 API，有两个大问题：
+1. 密钥直接暴露在前端代码里，任何人都能看到
+2. 会有跨域问题（CORS）
+
+生产环境一定要用后端代理，前端只请求自己的后端，由后端去调用大模型 API。
+
+最简单的方案：
+- 用 Node.js / Python 写一个简单的后端代理服务
+- 或者用云函数（Vercel / 阿里云函数计算 / 微信云函数）
+- 或者用 Nginx 反向代理
+
+这个话题比较大，我会在后续文章中详细讲。
+
+### 5.4 更多体验优化
+
+- **快捷提问**：预设几个常见问题，点击直接发送
+- **清空对话**：一键清空历史记录
+- **消息复制**：点击消息可以复制内容
+- **错误重试**：请求失败时显示「重新发送」按钮
+- **打字提示**：对方正在输入时显示「AI 正在思考...」
+- **暗黑模式**：跟随博客主题切换明暗
+- **移动端适配**：小屏幕上优化布局
+
+### 5.5 功能扩展思路
+
+- **知识库问答**：让 AI 基于博客文章内容回答问题（RAG）
+- **文章摘要**：自动生成当前文章的摘要
+- **文章翻译**：一键翻译整篇文章
+- **AI 写作助手**：帮助写博客文章
+- **智能搜索**：用 AI 优化博客站内搜索
+
+## 六、常见问题 FAQ
+
+### Q1：大模型 API 怎么申请？
+A：国内推荐：
+- 豆包（火山方舟）：https://www.volcengine.com/product/ark
+- 通义千问（阿里云百炼）：https://bailian.console.aliyun.com/
+- 智谱 AI：https://www.zhipuai.cn/
+
+新用户一般都有免费额度，个人开发完全够用。
+
+### Q2：会不会很花钱？
+A：普通对话非常便宜。比如通义千问 qwen-turbo，100 万 token 才几块钱，个人博客一天可能几分钱都不到。
+
+### Q3：可以接入多个模型吗？
+A：可以，做个下拉选择，用户可以切换不同的大模型。不同模型擅长的方向不一样，给用户更多选择。
+
+### Q4：Hexo Butterfly 主题怎么注入？
+A：在 `_config.butterfly.yml` 里找到 `inject` 配置：
+- CSS 注入到 `head`
+- HTML 注入到 `bottom`
+- JS 注入到 `bottom`
+
+注意 YAML 格式，缩进一定要对，不然 Hexo 编译会报错。
+
+## 七、总结
 
 这是我第一次真正把**AI 能力落地到自己前端项目**。
 
 不是练习、不是看视频、是**真正写进自己博客、自己网站、自己作品**的实战。
 
-后续我会继续优化：上下文记忆、流式输出、接口代理防泄密。
+整个过程中，我不仅学会了怎么调用大模型 API，更重要的是理解了「前端怎么和 AI 结合」——前端是 AI 能力触达用户的最后一公里，交互、体验、可视化，这些都是我们前端的主场。
+
+一个简单的 AI 聊天机器人，看起来不难，但从 0 到 1 真正做出来、部署上线，中间会遇到各种各样的坑。而踩坑的过程，就是成长最快的时候。
+
+后续我会继续优化这个博客 AI 助手，包括：
+- 上下文记忆和多轮对话
+- 流式输出打字机效果
+- 后端接口代理，解决密钥泄露和跨域
+- 知识库问答，基于博客文章内容回答问题
+- 更多有趣的 AI 小功能
+
+如果你也在做类似的东西，欢迎一起交流！

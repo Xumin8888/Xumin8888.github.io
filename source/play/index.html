@@ -1,0 +1,580 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>🎮 休闲小游戏合集 | Xu Min</title><meta name="author" content="Xu Min"><meta name="copyright" content="Xu Min"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="&#x2F;* 基础重置 *&#x2F; * {   margin: 0;   padding: 0;   box-sizing: border-box; } &#x2F;* 整体布局优化 *&#x2F; .game-wrap {   display: flex;   gap: 24px;   margin-top: 24px;   padding: 0 10px;   align-items: flex-start; } &#x2F;* 侧边">
+<meta property="og:type" content="website">
+<meta property="og:title" content="🎮 休闲小游戏合集">
+<meta property="og:url" content="http://example.com/play/index.html">
+<meta property="og:site_name" content="Xu Min">
+<meta property="og:description" content="&#x2F;* 基础重置 *&#x2F; * {   margin: 0;   padding: 0;   box-sizing: border-box; } &#x2F;* 整体布局优化 *&#x2F; .game-wrap {   display: flex;   gap: 24px;   margin-top: 24px;   padding: 0 10px;   align-items: flex-start; } &#x2F;* 侧边">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/cat.jpg">
+<meta property="article:published_time" content="2026-05-06T07:30:00.000Z">
+<meta property="article:modified_time" content="2026-05-06T10:01:28.492Z">
+<meta property="article:author" content="Xu Min">
+<meta property="article:tag" content="前端, React, Vue, Hexo, Xumin, 熊猫,项目">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/cat.jpg"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/play/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '🎮 休闲小游戏合集',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'page'
+}</script><style>
+/* AI悬浮按钮优化 */
+#ai-btn {
+  position:fixed;
+  right:5px;
+  bottom:207px;
+  width:46px;
+  height:46px;
+  border-radius:14px;
+  background:#6ca2ec;
+  color:#fff;
+  text-align:center;
+  cursor:pointer;
+  z-index:98;
+  box-shadow:0 3px 12px rgba(22,119,255,0.3);
+  transition: all 0.2s ease;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+#ai-btn:hover{
+  transform: translateY(-4px);
+  background:#0958d9;
+}
+/* 弹窗样式 */
+#ai-chat {
+  position:fixed;
+  right:22px;
+  bottom:190px;
+  width:360px;
+  height:480px;
+  background:#fff;
+  border-radius:12px;
+  box-shadow:0 6px 24px rgba(0,0,0,0.12);
+  z-index:99;
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+}
+#ai-chat.hidden {display:none;}
+#ai-chat-header {
+  background:#1677ff;
+  color:#fff;
+  padding:11px;
+  text-align:center;
+  font-weight:bold;
+  font-size:15px;
+}
+#ai-chat-body {flex:1;padding:12px;overflow:auto;background:#fafafa;}
+#ai-chat-input {display:flex;border-top:1px solid #e8e8e8;}
+#ai-chat-input input {flex:1;border:none;padding:12px;outline:none;font-size:14px;}
+#ai-chat-input button {width:72px;border:none;background:#1677ff;color:#fff;cursor:pointer;}
+.ai-msg {margin:9px 0;}
+.ai-msg.user {text-align:right;}
+.ai-msg.user span {background:#1677ff;color:#fff;padding:7px 11px;border-radius:12px 12px 2px 12px;display:inline-block;max-width:82%;}
+.ai-msg.bot {text-align:left;}
+.ai-msg.bot span {background:#ffffff;color:#333;padding:7px 11px;border-radius:12px 12px 12px 2px;display:inline-block;max-width:82%;border:1px solid #eee;}
+/* 加载动画 */
+.loading-dot span{
+  display:inline-block;
+  width:6px;height:6px;
+  border-radius:50%;
+  background:#999;
+  margin:0 2px;
+  animation: dot 1.2s infinite;
+}
+.loading-dot span:nth-child(2){animation-delay:0.2s;}
+.loading-dot span:nth-child(3){animation-delay:0.4s;}
+@keyframes dot{
+  0%,100%{opacity:0.3;transform:scale(0.8);}
+  50%{opacity:1;transform:scale(1);}
+}
+/* 子页面头部背景图 */
+header#page-header.not-home-page::before{
+  background-image: url('/img/4.jpg') !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-color: transparent !important;
+}
+header#page-header.not-home-page::after{
+  content:"";
+  position:absolute;
+  left:0;top:0;right:0;bottom:0;
+  background:rgba(0,0,0,0.25);
+}
+</style>
+<meta name="generator" content="Hexo 8.1.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/cat.jpg" onerror="this.onerror=null;this.src='/img/cat.jpg'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">22</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">14</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group"><span> 文章</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/"><i class="fa-fw fas fa-list"></i><span> 项目实战</span></a></li><li><a class="site-page child" href="/categories/%E5%85%B3%E4%BA%8E%E6%88%91/"><i class="fa-fw fas fa-code"></i><span> 关于我</span></a></li><li><a class="site-page child" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"><i class="fa-fw fas fa-book"></i><span> 博客搭建</span></a></li><li><a class="site-page child" href="/categories/%E7%9F%A5%E8%AF%86%E7%82%B9/"><i class="fa-fw fas fa-star"></i><span> 知识点</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><span> Demos</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/demos/study-system/"><i class="fa-fw fa fa-laptop-code"></i><span> 线上学习平台</span></a></li><li><a class="site-page child" href="/demos/study-system2/"><i class="fa-fw fa fa-laptop-code"></i><span> 线上课程学习系统</span></a></li><li><a class="site-page child" href="/demos/data-dashboard/"><i class="fa-fw fa fa-laptop-code"></i><span> 数据大屏</span></a></li><li><a class="site-page child" href="/demos/sellH5-project/"><i class="fa-fw fa fa-laptop-code"></i><span> 点餐小程序</span></a></li><li><a class="site-page child" href="/demos/sell-project/"><i class="fa-fw fa fa-laptop-code"></i><span> 外卖系统</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><span> 娱乐</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/play/"><i class="fa-fw fas fa-gamepad"></i><span> 小游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-user"></i><span> 关于我</span></a></div><div class="menus_item"><span class="site-page group"><span> AI专栏</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/%E5%BC%80%E7%AF%87/"><i class="fa-fw fas fa-robot"></i><span> 开篇</span></a></li><li><a class="site-page child" href="/categories/%E5%AE%9E%E6%93%8D/"><i class="fa-fw fas fa-robot"></i><span> 实操</span></a></li><li><a class="site-page child" href="/categories/%E5%AE%9E%E6%88%98/"><i class="fa-fw fas fa-robot"></i><span> 实战</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><span> 面试专题</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/interview-resume/"><i class="fa-fw fas fa-file-alt"></i><span> 简历指南</span></a></li><li><a class="site-page child" href="/categories/interview-exam/"><i class="fa-fw fas fa-pen"></i><span> 笔试题库</span></a></li><li><a class="site-page child" href="/categories/interview-question/"><i class="fa-fw fas fa-comments"></i><span> 面试题库</span></a></li></ul></div></div></div></div><div class="page type-games" id="body-wrap"><header class="not-home-page" id="page-header" style="background-image: url(/img/bj.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Xu Min</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group"><span> 文章</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/"><i class="fa-fw fas fa-list"></i><span> 项目实战</span></a></li><li><a class="site-page child" href="/categories/%E5%85%B3%E4%BA%8E%E6%88%91/"><i class="fa-fw fas fa-code"></i><span> 关于我</span></a></li><li><a class="site-page child" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"><i class="fa-fw fas fa-book"></i><span> 博客搭建</span></a></li><li><a class="site-page child" href="/categories/%E7%9F%A5%E8%AF%86%E7%82%B9/"><i class="fa-fw fas fa-star"></i><span> 知识点</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><span> Demos</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/demos/study-system/"><i class="fa-fw fa fa-laptop-code"></i><span> 线上学习平台</span></a></li><li><a class="site-page child" href="/demos/study-system2/"><i class="fa-fw fa fa-laptop-code"></i><span> 线上课程学习系统</span></a></li><li><a class="site-page child" href="/demos/data-dashboard/"><i class="fa-fw fa fa-laptop-code"></i><span> 数据大屏</span></a></li><li><a class="site-page child" href="/demos/sellH5-project/"><i class="fa-fw fa fa-laptop-code"></i><span> 点餐小程序</span></a></li><li><a class="site-page child" href="/demos/sell-project/"><i class="fa-fw fa fa-laptop-code"></i><span> 外卖系统</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><span> 娱乐</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/play/"><i class="fa-fw fas fa-gamepad"></i><span> 小游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-user"></i><span> 关于我</span></a></div><div class="menus_item"><span class="site-page group"><span> AI专栏</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/%E5%BC%80%E7%AF%87/"><i class="fa-fw fas fa-robot"></i><span> 开篇</span></a></li><li><a class="site-page child" href="/categories/%E5%AE%9E%E6%93%8D/"><i class="fa-fw fas fa-robot"></i><span> 实操</span></a></li><li><a class="site-page child" href="/categories/%E5%AE%9E%E6%88%98/"><i class="fa-fw fas fa-robot"></i><span> 实战</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><span> 面试专题</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/interview-resume/"><i class="fa-fw fas fa-file-alt"></i><span> 简历指南</span></a></li><li><a class="site-page child" href="/categories/interview-exam/"><i class="fa-fw fas fa-pen"></i><span> 笔试题库</span></a></li><li><a class="site-page child" href="/categories/interview-question/"><i class="fa-fw fas fa-comments"></i><span> 面试题库</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="page-site-info"><h1 id="site-title">🎮 休闲小游戏合集</h1></div></header><main class="layout" id="content-inner"><div id="page"><div class="container" id="article-container"><style>
+/* 基础重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* 整体布局优化 */
+.game-wrap {
+  display: flex;
+  gap: 24px;
+  margin-top: 24px;
+  padding: 0 10px;
+  align-items: flex-start;
+}
+/* 侧边游戏列表美化 */
+.game-list {
+  width: 240px;
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  height: calc(100vh - 120px);
+  overflow-y: auto;
+  position: sticky;
+  top: 24px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--theme-color) transparent;
+}
+.game-list::-webkit-scrollbar {
+  width: 6px;
+}
+.game-list::-webkit-scrollbar-thumb {
+  background: var(--theme-color);
+  border-radius: 3px;
+}
+.game-list h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: 600;
+}
+.game-list-item {
+  padding: 12px 14px;
+  margin: 8px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--text-color);
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.game-list-item::before {
+  content: "🎮";
+  font-size: 14px;
+}
+.game-list-item:hover,
+.game-list-item.active {
+  background: var(--theme-color);
+  color: #fff !important;
+  transform: translateX(4px);
+}
+/* 游戏主区域优化 */
+.game-main {
+  flex: 1;
+  min-width: 0;
+}
+.game-iframe-wrapper {
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+.game-iframe {
+  width: 100%;
+  height: 620px;
+  border: none;
+  display: block;
+}
+
+/* ========== 手机端专属修复 ========== */
+@media (max-width: 900px) {
+  .game-wrap {
+    flex-direction: column;
+    gap: 16px;
+    padding: 0;
+  }
+  .game-list {
+    width: 100%;
+    height: auto;
+    max-height: 220px;
+    position: static;
+    top: 0;
+  }
+  /* 手机游戏固定高度，完整显示不裁切 */
+  .game-iframe {
+    height: 460px;
+  }
+}
+@media (max-width: 600px) {
+  .game-list-item {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  /* 小手机再调低一点，保证完整显示 */
+  .game-iframe {
+    height: 400px;
+  }
+}
+</style>
+
+<div class="game-wrap">
+  <!-- 游戏侧边列表 -->
+  <div class="game-list">
+    <h3>游戏列表</h3>
+    <div class="game-list-item active" data-src="https://greedy-snake.netlify.app/">贪吃蛇</div>
+    <div class="game-list-item" data-src="https://tetris.com/play-tetris">俄罗斯方块</div>
+    <div class="game-list-item" data-src="https://flappybird.io/">像素鸟</div>
+    <div class="game-list-item" data-src="https://breakout-game.netlify.app/">打砖块</div>
+    <div class="game-list-item" data-src="https://gomoku-online.netlify.app/">五子棋</div>
+    <div class="game-list-item" data-src="https://minesweeper.netlify.app/">扫雷</div>
+    <div class="game-list-item" data-src="https://match-3-game.netlify.app/">消消乐</div>
+    <div class="game-list-item" data-src="https://puzzle-game.netlify.app/">拼图游戏</div>
+    <div class="game-list-item" data-src="https://fruit-catcher.netlify.app/">接水果</div>
+    <div class="game-list-item" data-src="https://maze-game.netlify.app/">迷宫闯关</div>
+    <div class="game-list-item" data-src="https://bubble-shooter.netlify.app/">泡泡龙</div>
+    <div class="game-list-item" data-src="https://super-mario-game.netlify.app/">超级马里奥</div>
+    <div class="game-list-item" data-src="https://race-car-game.netlify.app/">赛车游戏</div>
+    <div class="game-list-item" data-src="https://frogger.netlify.app/">青蛙过河</div>
+    <div class="game-list-item" data-src="https://egg-catcher.netlify.app/">接蛋蛋</div>
+    <div class="game-list-item" data-src="https://catch-ball.netlify.app/">接球小游戏</div>
+    <div class="game-list-item" data-src="https://fruit-ninja-online.netlify.app/">切水果</div>
+  </div>
+
+  <!-- 游戏展示区 -->
+  <div class="game-main">
+    <div class="game-iframe-wrapper">
+      <iframe class="game-iframe" id="gameIframe" src="https://greedy-snake.netlify.app/"></iframe>
+    </div>
+  </div>
+</div>
+
+<script>
+let items = document.querySelectorAll('.game-list-item');
+let iframe = document.getElementById('gameIframe');
+
+items.forEach(item => {
+  item.onclick = function(){
+    items.forEach(i => i.classList.remove('active'));
+    this.classList.add('active');
+    iframe.src = this.dataset.src;
+  }
+})
+</script></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/cat.jpg" onerror="this.onerror=null;this.src='/img/cat.jpg'" alt="avatar"/></div><div class="author-info-name">Xu Min</div><div class="author-info-description">Xumin 的前端实验室，专注分享 React、Vue 等前端技术与学习笔记</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">22</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">14</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/06/07/%E3%80%8AAI%20%E5%A4%9A%E6%A8%A1%E5%9E%8B%E9%97%AE%E7%AD%94%E9%A1%B9%E7%9B%AE%20%E5%BC%80%E5%8F%91%E4%BF%AE%E6%94%B9%20+%20GitHub%20%E5%BC%80%E6%BA%90%E5%85%A8%E6%B5%81%E7%A8%8B%E6%80%BB%E7%BB%93%E3%80%8B/" title="《AI 多模型问答项目 开发修改 + GitHub 开源全流程总结》">《AI 多模型问答项目 开发修改 + GitHub 开源全流程总结》</a><time datetime="2026-06-07T09:30:00.000Z" title="发表于 2026-06-07 17:30:00">2026-06-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/06/05/%E3%80%8A%E8%A7%A3%E5%86%B3%E8%87%B4%E5%91%BD%E9%97%AE%E9%A2%98%EF%BC%9A%E5%89%8D%E7%AB%AF%E7%9B%B4%E6%8E%A5%E8%B0%83%E7%94%A8%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%AF%86%E9%92%A5%E6%B3%84%E9%9C%B2%20+%20%E8%B7%A8%E5%9F%9F%20CORS%20%E5%BD%BB%E5%BA%95%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E3%80%8B/" title="《解决致命问题：前端直接调用大模型密钥泄露 + 跨域 CORS 彻底解决方案》">《解决致命问题：前端直接调用大模型密钥泄露 + 跨域 CORS 彻底解决方案》</a><time datetime="2026-06-05T08:20:00.000Z" title="发表于 2026-06-05 16:20:00">2026-06-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/06/03/%E3%80%8A%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2%20VS%20FAISS%20%E5%90%91%E9%87%8F%E6%A3%80%E7%B4%A2%E3%80%8B/" title="《全文检索 VS FAISS 向量检索》">《全文检索 VS FAISS 向量检索》</a><time datetime="2026-06-03T00:30:00.000Z" title="发表于 2026-06-03 08:30:00">2026-06-03</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/06/02/%E3%80%8A%E5%A4%9A%E6%A8%A1%E5%9E%8B%20AI%20%E9%97%AE%E7%AD%94%EF%BC%88%E5%85%A8%E6%96%87%20%20FAISS%20%E5%90%91%E9%87%8F%E5%8F%8C%E6%A3%80%E7%B4%A2%20+%20%E5%A4%9A%20PDF%20%E4%B8%8A%E4%BC%A0%E3%80%8B/" title="《多模型 AI 问答（全文  FAISS 向量双检索 + 多 PDF 上传）》">《多模型 AI 问答（全文  FAISS 向量双检索 + 多 PDF 上传）》</a><time datetime="2026-06-02T15:30:00.000Z" title="发表于 2026-06-02 23:30:00">2026-06-02</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/06/02/%E3%80%8A%E5%A4%9A%E6%A8%A1%E5%9E%8B%E9%80%9A%E7%94%A8%20AI%20%E9%97%AE%E7%AD%94%EF%BD%9C%E7%AE%80%E6%98%93%20PDF%20%E7%9F%A5%E8%AF%86%E5%BA%93%E7%89%88%20%E4%BB%8E%E9%9B%B6%E6%90%AD%E5%BB%BA%E5%AE%9E%E6%88%98%E3%80%8B/" title="《多模型通用 AI 问答｜简易 PDF 知识库版 从零搭建实战》">《多模型通用 AI 问答｜简易 PDF 知识库版 从零搭建实战》</a><time datetime="2026-06-02T14:30:00.000Z" title="发表于 2026-06-02 22:30:00">2026-06-02</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+      <i class="fas fa-angle-right"></i></a>
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/interview-resume/"><span class="card-category-list-name">interview-resume</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%BB%8B%E7%BB%8D/"><span class="card-category-list-name">介绍</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%85%B3%E4%BA%8E%E6%88%91/"><span class="card-category-list-name">关于我</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"><span class="card-category-list-name">博客搭建</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AE%9E%E6%88%98/"><span class="card-category-list-name">实战</span><span class="card-category-list-count">5</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AE%9E%E6%93%8D/"><span class="card-category-list-name">实操</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%BC%80%E7%AF%87/"><span class="card-category-list-name">开篇</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%9F%A5%E8%AF%86%E7%82%B9/"><span class="card-category-list-name">知识点</span><span class="card-category-list-count">3</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E5%A4%A7%E5%B1%8F%E5%BC%80%E5%8F%91/" style="font-size: 1.1em; color: #999">大屏开发</a> <a href="/tags/ECharts/" style="font-size: 1.1em; color: #999">ECharts</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/" style="font-size: 1.1em; color: #999">数据可视化</a> <a href="/tags/Xumin/" style="font-size: 1.1em; color: #999">Xumin</a> <a href="/tags/%E7%AE%80%E5%8E%86/" style="font-size: 1.1em; color: #999">简历</a> <a href="/tags/uni-app/" style="font-size: 1.1em; color: #999">uni-app</a> <a href="/tags/%E5%85%A5%E9%97%A8/" style="font-size: 1.1em; color: #999">入门</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 1.1em; color: #999">前端</a> <a href="/tags/Vue3/" style="font-size: 1.1em; color: #999">Vue3</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 1.1em; color: #999">博客</a> <a href="/tags/Hexo/" style="font-size: 1.3em; color: #99a1ac">Hexo</a> <a href="/tags/%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE/" style="font-size: 1.3em; color: #99a1ac">前端项目</a> <a href="/tags/Python-Flask-Vue-%E5%A4%A7%E6%A8%A1%E5%9E%8B-%E8%B7%A8%E5%9F%9F%E5%AE%89%E5%85%A8/" style="font-size: 1.1em; color: #999">Python,Flask,Vue,大模型,跨域安全</a> <a href="/tags/Python-Flask-Vue-%E5%A4%A7%E6%A8%A1%E5%9E%8BAPI/" style="font-size: 1.5em; color: #99a9bf">Python,Flask,Vue,大模型API</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/06/">
+            <span class="card-archive-list-date">
+              六月 2026
+            </span>
+            <span class="card-archive-list-count">7</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/05/">
+            <span class="card-archive-list-date">
+              五月 2026
+            </span>
+            <span class="card-archive-list-count">6</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/04/">
+            <span class="card-archive-list-date">
+              四月 2026
+            </span>
+            <span class="card-archive-list-count">4</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/03/">
+            <span class="card-archive-list-date">
+              三月 2026
+            </span>
+            <span class="card-archive-list-count">5</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">22</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-06-15T01:58:42.832Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Xu Min</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"></div><!-- 机器人图标按钮（SVG内置，不用引入图片） -->
+<div id="ai-btn">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+    <rect x="3" y="11" width="18" height="10" rx="2"/>
+    <circle cx="7" cy="5" r="3"/>
+    <circle cx="17" cy="5" r="3"/>
+    <path d="M12 2v4"/>
+  </svg>
+</div>
+<div id="ai-chat" class="hidden">
+    <div id="ai-chat-header">博客AI助手</div>
+    <div id="ai-chat-body"></div>
+    <div id="ai-chat-input">
+      <input type="text" placeholder="输入问题，回车发送" id="ai-input">
+      <button id="ai-send">发送</button>
+    </div>
+</div>
+<script>
+const API_KEY = 'ark-81facc8c-4f09-4e10-8273-c5be387c3c7e-f0a19';
+const ENDPOINT = 'ep-m-20260602173054-jmbn2';
+const aiBtn = document.getElementById('ai-btn');
+const aiChat = document.getElementById('ai-chat');
+const aiBody = document.getElementById('ai-chat-body');
+const aiInput = document.getElementById('ai-input');
+const aiSend = document.getElementById('ai-send');
+
+aiBtn.addEventListener('click', () => aiChat.classList.toggle('hidden'));
+
+// 全局loading标识
+let isLoading = false;
+let loadingDom = null;
+
+async function sendMsg() {
+  const text = aiInput.value.trim();
+  if (!text || isLoading) return;
+  addMsg(text, 'user');
+  aiInput.value = '';
+
+  // 插入思考加载节点
+  isLoading = true;
+  loadingDom = document.createElement('div');
+  loadingDom.className = 'ai-msg bot';
+  loadingDom.innerHTML = `<span class="loading-dot">AI正在思考<span>●</span><span>●</span><span>●</span></span>`;
+  aiBody.appendChild(loadingDom);
+  aiBody.scrollTop = aiBody.scrollHeight;
+
+  try {
+    const res = await fetch('https://ark.cn-beijing.volces.com/api/v3/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${API_KEY}`
+      },
+      body: JSON.stringify({
+        model: ENDPOINT,
+        messages: [{ role: 'user', content: text }],
+        stream: false
+      })
+    });
+    const data = await res.json();
+    const reply = data.choices?.[0]?.message?.content || '抱歉，没理解你的问题';
+    // 移除加载，替换为真实回复
+    loadingDom.remove();
+    addMsg(reply, 'bot');
+  } catch (e) {
+    loadingDom.remove();
+    addMsg('AI接口出错了，请稍后再试', 'bot');
+    console.error(e);
+  } finally {
+    isLoading = false;
+  }
+}
+
+function addMsg(text, role) {
+  const div = document.createElement('div');
+  div.className = 'ai-msg ' + role;
+  div.innerHTML = `<span>${text}</span>`;
+  aiBody.appendChild(div);
+  aiBody.scrollTop = aiBody.scrollHeight;
+}
+
+aiSend.addEventListener('click', sendMsg);
+aiInput.addEventListener('keydown', e => e.key === 'Enter' && sendMsg());
+</script>
+<script id="canvas_nest" defer="defer" color="102, 204, 255" opacity="0.7" zIndex="-1" count="80" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/canvas-nest.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div>
+<script>
+(function() {
+    function handleError(img) {
+        if (img.dataset.placeholder) return;
+        img.dataset.placeholder = 'true';
+        var w = img.naturalWidth || img.width || 400;
+        var h = img.naturalHeight || img.height || 300;
+        var seed = Math.floor(Math.random() * 1000);
+        img.src = 'https://picsum.photos/seed/' + seed + '/' + w + '/' + h;
+        img.style.objectFit = 'cover';
+    }
+    
+    document.addEventListener('error', function(e) {
+        if (e.target.tagName === 'IMG') {
+            handleError(e.target);
+        }
+    }, true);
+    
+    var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            mutation.addedNodes.forEach(function(node) {
+                if (node.tagName === 'IMG') {
+                    node.addEventListener('error', function() { handleError(node); });
+                    if (node.complete && !node.naturalWidth) {
+                        handleError(node);
+                    }
+                } else if (node.querySelectorAll) {
+                    node.querySelectorAll('img').forEach(function(img) {
+                        img.addEventListener('error', function() { handleError(img); });
+                        if (img.complete && !img.naturalWidth) {
+                            handleError(img);
+                        }
+                    });
+                }
+            });
+        });
+    });
+    
+    observer.observe(document.documentElement, { childList: true, subtree: true });
+    
+    document.querySelectorAll('img').forEach(function(img) {
+        img.addEventListener('error', function() { handleError(img); });
+        if (img.complete && !img.naturalWidth) {
+            handleError(img);
+        }
+    });
+    
+    var style = document.createElement('style');
+    style.textContent = 'img[src*="picsum.photos"] { background: #f0f0f0; }';
+    document.head.appendChild(style);
+})();
+</script>
+</body></html>

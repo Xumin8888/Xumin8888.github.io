@@ -13,7 +13,7 @@ timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://xumin8888.github.io
+url: https://XuMin8888.github.io
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -29,6 +29,8 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
+  - demos/**/*
+  - play/**/*
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -100,7 +102,6 @@ theme: butterfly
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
+## 使用 GitHub Actions 自动部署，详见 .github/workflows/deploy.yml
 deploy:
-  type: git
-  repo: https://github.com/Xumin8888/Xumin8888.github.io.git
-  branch: main
+  type: ''
