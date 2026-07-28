@@ -8,10 +8,8 @@ tags:
   - 笔试
   - TypeScript
   - 前端
-  - 类型
 top_img: /img/bj.jpg
-cover: /img/1.jpg
----
+cover: /img/1.jpg---
 
 ## 一、TypeScript 基础
 

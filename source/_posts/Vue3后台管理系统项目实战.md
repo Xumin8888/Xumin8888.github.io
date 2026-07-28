@@ -4,14 +4,12 @@ date: 2026-06-10 14:00:00
 categories:
   - 项目
 tags:
-  - Vue3
-  - Vite
-  - Element Plus
+  - Vue
+  - 工程化
   - 后台管理
   - 项目实战
 top_img: /img/bj.jpg
-cover: /img/1.jpg
----
+cover: /img/1.jpg---
 
 ## 项目概述
 

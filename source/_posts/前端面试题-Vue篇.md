@@ -8,10 +8,8 @@ tags:
   - 笔试
   - Vue
   - 前端
-  - 框架
 top_img: /img/bj.jpg
-cover: /img/4.jpg
----
+cover: /img/4.jpg---
 
 ## 一、Vue 响应式原理
 

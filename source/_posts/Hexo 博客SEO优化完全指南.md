@@ -6,12 +6,10 @@ categories:
 tags:
   - Hexo
   - SEO
-  - 优化
-  - 搜索引擎
-  - 教程
+  - 性能优化
+  - 项目实战
 top_img: /img/bj.jpg
-cover: /img/cat.jpg
----
+cover: /img/cat.jpg---
 
 ## 前言
 

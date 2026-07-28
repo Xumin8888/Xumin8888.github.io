@@ -4,13 +4,10 @@ date: 2026-06-01 07:30:00
 categories:
   - AI专栏
 tags:
-  - 实操
-  - API
-  - 多模型
-  - 大模型
+  - 项目实战
+  - AI
 top_img: /img/bj.jpg
-cover: /img/2.jpg
----
+cover: /img/2.jpg---
 
 # 《多厂商大模型 API 统一接入实战｜智谱 GLM / 火山豆包 / 通义千问一站式调用》
 

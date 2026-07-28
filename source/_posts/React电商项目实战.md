@@ -5,13 +5,10 @@ categories:
   - 项目
 tags:
   - React
-  - Redux
   - 电商
-  - Ant Design
   - 项目实战
 top_img: /img/bj.jpg
-cover: /img/2.jpg
----
+cover: /img/2.jpg---
 
 ## 项目概述
 

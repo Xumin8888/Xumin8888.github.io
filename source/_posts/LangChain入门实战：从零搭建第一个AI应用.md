@@ -4,13 +4,12 @@ date: 2026-07-12 14:20:00
 categories:
   - AI专栏
 tags:
-  - 实操
+  - 项目实战
   - LangChain
-  - AI应用开发
+  - AI
   - RAG
 top_img: /img/bj.jpg
-cover: /img/2.jpg
----
+cover: /img/2.jpg---
 
 ## 前言
 

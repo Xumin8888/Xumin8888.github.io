@@ -5,13 +5,9 @@ categories:
   - 项目
 tags:
   - Node.js
-  - Express
-  - MySQL
-  - 后端开发
   - 项目实战
 top_img: /img/bj.jpg
-cover: /img/4.jpg
----
+cover: /img/4.jpg---
 
 ## 项目概述
 

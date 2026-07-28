@@ -5,13 +5,10 @@ categories:
   - 博客搭建
 tags:
   - Hexo
-  - 评论系统
-  - 访客统计
-  - 教程
-  - 互动
+  - 博客搭建
+  - 项目实战
 top_img: /img/bj.jpg
-cover: /img/2.jpg
----
+cover: /img/2.jpg---
 
 ## 前言
 

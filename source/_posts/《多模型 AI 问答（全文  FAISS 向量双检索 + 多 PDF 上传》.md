@@ -4,13 +4,11 @@ date: 2026-06-02 15:30:00
 categories:
   - AI专栏
 tags:
-  - 实战
-  - 向量数据库
-  - FAISS
-  - 双模式检索
+  - 项目实战
+  - RAG
+  - AI
 top_img: /img/bj.jpg
-cover: /img/4.jpg
----
+cover: /img/4.jpg---
 
 # 《多模型 AI 问答（全文 / FAISS 向量双检索 + 多 PDF 上传）》
 

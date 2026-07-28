@@ -4,13 +4,10 @@ date: 2026-06-07 09:30:00
 categories:
   - AI专栏
 tags:
-  - 实战
-  - 项目
-  - 开源
-  - GitHub
+  - 项目实战
+  - 博客搭建
 top_img: /img/bj.jpg
-cover: /img/cat.jpg
----
+cover: /img/cat.jpg---
 
 # 《AI 多模型问答项目 开发修改 + GitHub 开源全流程总结》
 

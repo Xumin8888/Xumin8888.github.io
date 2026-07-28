@@ -4,13 +4,11 @@ date: 2026-07-16 11:00:00
 categories:
   - AI专栏
 tags:
-  - 实战
-  - 智能客服
+  - 项目实战
+  - AI
   - RAG
-  - 多轮对话
 top_img: /img/bj.jpg
-cover: /img/4.jpg
----
+cover: /img/4.jpg---
 
 ## 前言
 

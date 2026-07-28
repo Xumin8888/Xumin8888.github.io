@@ -4,13 +4,10 @@ date: 2026-07-18 15:30:00
 categories:
   - AI专栏
 tags:
-  - 实战
-  - 代码审查
-  - AI工具
-  - 开发效率
+  - 项目实战
+  - AI
 top_img: /img/bj.jpg
-cover: /img/cat.jpg
----
+cover: /img/cat.jpg---
 
 ## 前言
 

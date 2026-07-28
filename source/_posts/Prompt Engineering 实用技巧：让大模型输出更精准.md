@@ -4,13 +4,11 @@ date: 2026-07-14 09:45:00
 categories:
   - AI专栏
 tags:
-  - 实操
-  - 提示词工程
-  - Prompt
-  - 效率提升
+  - 项目实战
+  - 提示词
+  - AI
 top_img: /img/bj.jpg
-cover: /img/3.jpg
----
+cover: /img/3.jpg---
 
 ## 前言
 

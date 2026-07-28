@@ -4,13 +4,12 @@ date: 2026-07-10 10:30:00
 categories:
   - AI专栏
 tags:
-  - 开篇
-  - 职业发展
-  - 前端转型
-  - AI赋能
+  - 项目实战
+  - 求职
+  - 前端
+  - AI
 top_img: /img/bj.jpg
-cover: /img/1.jpg
----
+cover: /img/1.jpg---
 
 ## 前言
 

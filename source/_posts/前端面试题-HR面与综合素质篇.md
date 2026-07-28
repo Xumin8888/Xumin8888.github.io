@@ -6,13 +6,10 @@ categories:
 tags:
   - 面试
   - 笔试
-  - HR面
-  - 综合素质
   - 求职
   - 前端
 top_img: /img/bj.jpg
-cover: /img/cat.jpg
----
+cover: /img/cat.jpg---
 
 ## 前言
 

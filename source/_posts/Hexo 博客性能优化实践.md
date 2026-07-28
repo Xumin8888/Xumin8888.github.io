@@ -6,12 +6,8 @@ categories:
 tags:
   - Hexo
   - 性能优化
-  - 图片压缩
-  - CDN
-  - 懒加载
 top_img: /img/bj.jpg
-cover: /img/1.jpg
----
+cover: /img/1.jpg---
 
 ## 前言
 

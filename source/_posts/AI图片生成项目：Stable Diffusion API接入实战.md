@@ -4,13 +4,10 @@ date: 2026-07-19 20:00:00
 categories:
   - AI专栏
 tags:
-  - 实战
-  - AI绘图
-  - Stable Diffusion
-  - 图片生成
+  - 项目实战
+  - AI
 top_img: /img/bj.jpg
-cover: /img/1.jpg
----
+cover: /img/1.jpg---
 
 ## 前言
 

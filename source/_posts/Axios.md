@@ -5,11 +5,8 @@ categories:
   - 前端
 tags:
   - 前端
-  - Axios
-  - 网络请求
 top_img: /img/bj.jpg
-cover: /img/1.jpg
----
+cover: /img/1.jpg---
 
 # Axios请求
 

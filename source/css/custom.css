@@ -33,16 +33,17 @@
 }
 
 #nav {
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background: transparent !important;
+  box-shadow: none !important;
 }
 
 #nav.show {
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  background: rgba(255, 255, 255, 0.9) !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background: transparent !important;
+  box-shadow: none !important;
 }
 
 #aside-content .card-info .card-info-data > a .headline {
@@ -163,11 +164,11 @@ div#note-container .note {
 }
 
 [data-theme='dark'] #nav {
-  background: rgba(28, 28, 28, 0.8) !important;
+  background: transparent !important;
 }
 
 [data-theme='dark'] #nav.show {
-  background: rgba(28, 28, 28, 0.9) !important;
+  background: transparent !important;
 }
 
 [data-theme='dark'] #footer {

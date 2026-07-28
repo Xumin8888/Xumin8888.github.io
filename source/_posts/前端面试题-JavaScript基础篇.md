@@ -6,12 +6,9 @@ categories:
 tags:
   - 面试
   - 笔试
-  - JavaScript
   - 前端
-  - 基础
 top_img: /img/bj.jpg
-cover: /img/2.jpg
----
+cover: /img/2.jpg---
 
 ## 一、数据类型
 

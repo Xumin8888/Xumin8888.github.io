@@ -4,13 +4,11 @@ date: 2026-05-18 23:55:28
 categories:
   - AI专栏
 tags:
-  - 实操
+  - 项目实战
   - Hexo
-  - AI对话
-  - 大模型
+  - AI
 top_img: /img/bj.jpg
-cover: /img/3.jpg
----
+cover: /img/3.jpg---
 
 手把手给 Hexo 博客接入 AI 对话机器人
 

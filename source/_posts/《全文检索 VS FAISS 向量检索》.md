@@ -4,13 +4,10 @@ date: 2026-06-03 00:30:00
 categories:
   - AI专栏
 tags:
-  - 实操
-  - 向量数据库
+  - 项目实战
   - RAG
-  - FAISS
 top_img: /img/bj.jpg
-cover: /img/1.jpg
----
+cover: /img/1.jpg---
 
 # 《全文检索 VS FAISS 向量检索》
 

@@ -5,13 +5,9 @@ categories:
   - 博客搭建
 tags:
   - Hexo
-  - Butterfly
-  - 主题配置
-  - 教程
-  - 美化
+  - 项目实战
 top_img: /img/bj.jpg
-cover: /img/4.jpg
----
+cover: /img/4.jpg---
 
 ## 前言
 

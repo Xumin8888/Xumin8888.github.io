@@ -8,10 +8,8 @@ tags:
   - 笔试
   - React
   - 前端
-  - 框架
 top_img: /img/bj.jpg
-cover: /img/cat.jpg
----
+cover: /img/cat.jpg---
 
 ## 一、React 基础
 

@@ -5,13 +5,9 @@ categories:
   - 博客搭建
 tags:
   - Hexo
-  - 报错解决
-  - 部署
-  - 故障排查
-  - GitHub Pages
+  - 博客搭建
 top_img: /img/bj.jpg
-cover: /img/3.jpg
----
+cover: /img/3.jpg---
 
 ## 前言
 

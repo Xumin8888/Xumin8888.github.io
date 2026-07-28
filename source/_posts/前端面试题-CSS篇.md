@@ -6,12 +6,9 @@ categories:
 tags:
   - 面试
   - 笔试
-  - CSS
   - 前端
-  - 样式
 top_img: /img/bj.jpg
-cover: /img/3.jpg
----
+cover: /img/3.jpg---
 
 ## 一、盒模型
 
