@@ -30,29 +30,39 @@ nav:
 
 menu:
   首页: / || fas fa-home
-  文章||fas fa-newspaper:
-    项目实战: /categories/项目/ || fas fa-code
-    关于我: /about/ || fas fa-user
-    博客搭建: /categories/博客搭建/ || fas fa-wrench
-    知识点: /tags/ || fas fa-book
-  Demos||fas fa-play:
-    线上学习平台: /demos/study-system/ || fas fa-desktop
-    线上课程学习系统: /demos/study-system2/ || fas fa-graduation-cap
-    数据大屏: /demos/data-dashboard/ || fas fa-chart-bar
-    点餐小程序: /demos/sellH5-project/ || fas fa-utensils
-    外卖系统: /demos/sell-project/ || fas fa-motorcycle
-  娱乐||fas fa-gamepad:
-    小游戏: /play/ || fas fa-gamepad
-  关于我: /about/ || fas fa-user
+  前端||fas fa-code:
+    Vue: /tags/Vue/ || fab fa-vuejs
+    React: /tags/React/ || fab fa-react
+    TypeScript: /tags/TypeScript/ || fas fa-code
+    Node.js: /tags/Node.js/ || fab fa-node-js
+    工程化: /tags/工程化/ || fas fa-tools
   AI专栏||fas fa-robot:
-    AI专栏: /categories/AI专栏/ || fas fa-robot
+    全部文章: /categories/AI专栏/ || fas fa-list
     LangChain: /tags/LangChain/ || fas fa-link
     RAG实战: /tags/RAG/ || fas fa-database
     提示词: /tags/提示词/ || fas fa-magic
+    项目实战: /tags/项目实战/ || fas fa-laptop-code
   面试专题||fas fa-briefcase:
     简历指南: /tags/求职/ || fas fa-file-alt
-    笔试题库: /tags/笔试/ || fas fa-pencil-alt
-    面试题库: /tags/面试/ || fas fa-comments
+    前端面试题: /categories/面试/ || fas fa-question-circle
+    面试技巧: /tags/面试技巧/ || fas fa-lightbulb
+  博客搭建||fas fa-wrench:
+    全部教程: /categories/博客搭建/ || fas fa-list
+    Hexo教程: /tags/Hexo/ || fab fa-blogger-b
+    SEO优化: /tags/SEO/ || fas fa-search
+    性能优化: /tags/性能优化/ || fas fa-tachometer-alt
+  项目||fas fa-folder-open:
+    全部项目: /categories/项目/ || fas fa-list
+    数据大屏: /demos/data-dashboard/ || fas fa-chart-bar
+    点餐小程序: /demos/sellH5-project/ || fas fa-utensils
+    外卖系统: /demos/sell-project/ || fas fa-motorcycle
+  归档||fas fa-archive:
+    全部归档: /archives/ || fas fa-archive
+    分类: /categories/ || fas fa-th-large
+    标签: /tags/ || fas fa-tags
+  娱乐||fas fa-gamepad:
+    小游戏: /play/ || fas fa-gamepad
+  关于我: /about/ || fas fa-user
 
 # --------------------------------------
 
@@ -1524,8 +1534,32 @@ css_prefix: true
 inject:
   head:
     - <link rel="stylesheet" href="/css/custom.css">
+    - <link rel="stylesheet" href="/css/ai-chat.css">
   bottom:
-    # - <script src="xxxx"></script>
+    - |
+      <div id="ai-btn">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+        </svg>
+      </div>
+      <div id="ai-chat">
+        <div id="ai-chat-header">
+          <span>博客AI小助手</span>
+          <span class="close-btn" id="ai-chat-close">×</span>
+        </div>
+        <div id="ai-chat-body"></div>
+        <div id="ai-chat-quick">
+          <span class="quick-question">博客有多少篇文章？</span>
+          <span class="quick-question">怎么联系博主？</span>
+          <span class="quick-question">前端有哪些文章？</span>
+          <span class="quick-question">AI专栏有什么？</span>
+        </div>
+        <div id="ai-chat-input">
+          <input type="text" placeholder="输入问题，回车发送">
+          <button>发送</button>
+        </div>
+      </div>
+    - <script src="/js/ai-chat.js"></script>
 
 # CDN Settings
 
