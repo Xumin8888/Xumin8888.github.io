@@ -67,8 +67,8 @@ date: 2026-03-16 00:00:00
 
 如果你有任何问题或合作意向，欢迎通过以下方式联系我：
 
-- **GitHub**：[点击访问](https://github.com/)
-- **邮箱**：your-email@example.com
+- **GitHub**：`https://github.com/Xumin8888`
+- **邮箱**：3140387327@qq.com
 
 ---
 
