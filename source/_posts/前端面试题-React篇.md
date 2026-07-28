@@ -1,4 +1,4 @@
----
+﻿---
 title: 前端面试题 - React 篇
 date: 2024-01-19 10:00:00
 categories:
@@ -9,7 +9,8 @@ tags:
   - React
   - 前端
 top_img: /img/bj.jpg
-cover: /img/cat.jpg---
+cover: /img/cat.jpg
+---
 
 ## 一、React 基础
 

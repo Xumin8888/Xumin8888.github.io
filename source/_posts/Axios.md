@@ -1,4 +1,4 @@
----
+﻿---
 title: Axios
 date: 2026-03-30 01:33:28
 categories:
@@ -6,7 +6,8 @@ categories:
 tags:
   - 前端
 top_img: /img/bj.jpg
-cover: /img/1.jpg---
+cover: /img/1.jpg
+---
 
 # Axios请求
 

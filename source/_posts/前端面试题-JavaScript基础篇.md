@@ -1,4 +1,4 @@
----
+﻿---
 title: 前端面试题 - JavaScript 基础篇
 date: 2024-01-15 10:00:00
 categories:
@@ -8,7 +8,8 @@ tags:
   - 笔试
   - 前端
 top_img: /img/bj.jpg
-cover: /img/2.jpg---
+cover: /img/2.jpg
+---
 
 ## 一、数据类型
 

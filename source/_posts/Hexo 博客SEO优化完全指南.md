@@ -1,4 +1,4 @@
----
+﻿---
 title: Hexo 博客 SEO 优化完全指南
 date: 2026-06-20 14:00:00
 categories:
@@ -9,7 +9,8 @@ tags:
   - 性能优化
   - 项目实战
 top_img: /img/bj.jpg
-cover: /img/cat.jpg---
+cover: /img/cat.jpg
+---
 
 ## 前言
 

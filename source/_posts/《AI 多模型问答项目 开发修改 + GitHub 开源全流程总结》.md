@@ -1,4 +1,4 @@
----
+﻿---
 title: AI 多模型问答项目 开发修改 + GitHub 开源全流程总结
 date: 2026-06-07 09:30:00
 categories:
@@ -7,7 +7,8 @@ tags:
   - 项目实战
   - 博客搭建
 top_img: /img/bj.jpg
-cover: /img/cat.jpg---
+cover: /img/cat.jpg
+---
 
 # 《AI 多模型问答项目 开发修改 + GitHub 开源全流程总结》
 

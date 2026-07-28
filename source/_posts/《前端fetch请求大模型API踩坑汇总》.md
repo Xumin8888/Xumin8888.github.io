@@ -1,4 +1,4 @@
----
+﻿---
 title: 前端fetch请求大模型API踩坑汇总
 date: 2026-05-19 23:55:28
 categories:
@@ -8,7 +8,8 @@ tags:
   - 前端
   - AI
 top_img: /img/bj.jpg
-cover: /img/4.jpg---
+cover: /img/4.jpg
+---
 
 《前端fetch请求大模型API踩坑汇总》
 

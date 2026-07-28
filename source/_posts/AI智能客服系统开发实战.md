@@ -1,4 +1,4 @@
----
+﻿---
 title: AI 智能客服系统开发实战
 date: 2026-07-16 11:00:00
 categories:
@@ -8,7 +8,8 @@ tags:
   - AI
   - RAG
 top_img: /img/bj.jpg
-cover: /img/4.jpg---
+cover: /img/4.jpg
+---
 
 ## 前言
 

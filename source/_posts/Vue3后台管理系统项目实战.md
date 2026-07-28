@@ -1,4 +1,4 @@
----
+﻿---
 title: Vue3 后台管理系统项目实战
 date: 2026-06-10 14:00:00
 categories:
@@ -9,7 +9,8 @@ tags:
   - 后台管理
   - 项目实战
 top_img: /img/bj.jpg
-cover: /img/1.jpg---
+cover: /img/1.jpg
+---
 
 ## 项目概述
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: AI时代前端工程师的职业发展与转型思考
 date: 2026-07-10 10:30:00
 categories:
@@ -9,7 +9,8 @@ tags:
   - 前端
   - AI
 top_img: /img/bj.jpg
-cover: /img/1.jpg---
+cover: /img/1.jpg
+---
 
 ## 前言
 

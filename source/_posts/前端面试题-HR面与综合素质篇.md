@@ -1,4 +1,4 @@
----
+﻿---
 title: 前端面试题 - HR 面与综合素质篇
 date: 2026-07-20 10:00:00
 categories:
@@ -9,7 +9,8 @@ tags:
   - 求职
   - 前端
 top_img: /img/bj.jpg
-cover: /img/cat.jpg---
+cover: /img/cat.jpg
+---
 
 ## 前言
 

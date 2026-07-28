@@ -1,4 +1,4 @@
----
+﻿---
 title: 多模型 AI 问答｜全文 / FAISS 向量双检索 + 多 PDF 上传
 date: 2026-06-02 15:30:00
 categories:
@@ -8,7 +8,8 @@ tags:
   - RAG
   - AI
 top_img: /img/bj.jpg
-cover: /img/4.jpg---
+cover: /img/4.jpg
+---
 
 # 《多模型 AI 问答（全文 / FAISS 向量双检索 + 多 PDF 上传）》
 

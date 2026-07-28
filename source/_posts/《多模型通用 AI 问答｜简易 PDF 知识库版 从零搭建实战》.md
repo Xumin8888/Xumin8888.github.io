@@ -1,4 +1,4 @@
----
+﻿---
 title: 多模型通用 AI 问答｜简易 PDF 知识库版 从零搭建实战
 date: 2026-06-02 14:30:00
 categories:
@@ -8,7 +8,8 @@ tags:
   - RAG
   - AI
 top_img: /img/bj.jpg
-cover: /img/3.jpg---
+cover: /img/3.jpg
+---
 
 ## 《多模型通用 AI 问答｜简易 PDF 知识库版 从零搭建实战》
 

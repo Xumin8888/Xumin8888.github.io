@@ -1,4 +1,4 @@
----
+﻿---
 title: 全文检索 VS FAISS 向量检索
 date: 2026-06-03 00:30:00
 categories:
@@ -7,7 +7,8 @@ tags:
   - 项目实战
   - RAG
 top_img: /img/bj.jpg
-cover: /img/1.jpg---
+cover: /img/1.jpg
+---
 
 # 《全文检索 VS FAISS 向量检索》
 

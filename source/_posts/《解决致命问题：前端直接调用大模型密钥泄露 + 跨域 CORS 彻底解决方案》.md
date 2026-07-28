@@ -1,4 +1,4 @@
----
+﻿---
 title: 解决致命问题：前端直接调用大模型密钥泄露 + 跨域 CORS 彻底解决方案
 date: 2026-06-05 08:20:00
 categories:
@@ -7,7 +7,8 @@ tags:
   - 项目实战
   - AI
 top_img: /img/bj.jpg
-cover: /img/cat.jpg---
+cover: /img/cat.jpg
+---
 
 # 《解决致命问题：前端直接调用大模型密钥泄露 + 跨域 CORS 彻底解决方案》
 

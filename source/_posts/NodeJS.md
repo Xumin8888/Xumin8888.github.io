@@ -1,4 +1,4 @@
----
+﻿---
 title: NodeJS
 date: 2026-03-30 12:33:28
 categories:
@@ -6,7 +6,8 @@ categories:
 tags:
   - Node.js
 top_img: /img/bj.jpg
-cover: /img/3.jpg---
+cover: /img/3.jpg
+---
 
 # NodeJS
 

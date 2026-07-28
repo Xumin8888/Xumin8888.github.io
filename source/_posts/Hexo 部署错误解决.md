@@ -1,4 +1,4 @@
----
+﻿---
 title: Hexo 部署与常见错误完全解决方案
 date: 2026-05-05 02:35:00
 categories:
@@ -7,7 +7,8 @@ tags:
   - Hexo
   - 博客搭建
 top_img: /img/bj.jpg
-cover: /img/3.jpg---
+cover: /img/3.jpg
+---
 
 ## 前言
 

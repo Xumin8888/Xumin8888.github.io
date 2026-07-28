@@ -1,4 +1,4 @@
----
+﻿---
 title: Hexo 博客接入评论系统与访客统计完全指南
 date: 2026-07-10 16:00:00
 categories:
@@ -8,7 +8,8 @@ tags:
   - 博客搭建
   - 项目实战
 top_img: /img/bj.jpg
-cover: /img/2.jpg---
+cover: /img/2.jpg
+---
 
 ## 前言
 

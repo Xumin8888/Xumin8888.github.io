@@ -1,4 +1,4 @@
----
+﻿---
 title: Prompt Engineering 实用技巧：让大模型输出更精准
 date: 2026-07-14 09:45:00
 categories:
@@ -8,7 +8,8 @@ tags:
   - 提示词
   - AI
 top_img: /img/bj.jpg
-cover: /img/3.jpg---
+cover: /img/3.jpg
+---
 
 ## 前言
 

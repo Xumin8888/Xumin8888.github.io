@@ -1,4 +1,4 @@
----
+﻿---
 title: 前端面试题 - Vue 篇
 date: 2024-01-17 10:00:00
 categories:
@@ -9,7 +9,8 @@ tags:
   - Vue
   - 前端
 top_img: /img/bj.jpg
-cover: /img/4.jpg---
+cover: /img/4.jpg
+---
 
 ## 一、Vue 响应式原理
 

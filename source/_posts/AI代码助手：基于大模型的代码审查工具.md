@@ -1,4 +1,4 @@
----
+﻿---
 title: AI 代码助手：基于大模型的代码审查工具
 date: 2026-07-18 15:30:00
 categories:
@@ -7,7 +7,8 @@ tags:
   - 项目实战
   - AI
 top_img: /img/bj.jpg
-cover: /img/cat.jpg---
+cover: /img/cat.jpg
+---
 
 ## 前言
 

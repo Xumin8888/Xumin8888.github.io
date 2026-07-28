@@ -1,4 +1,4 @@
----
+﻿---
 title: Hexo Butterfly 主题配置完全指南
 date: 2026-06-15 10:00:00
 categories:
@@ -7,7 +7,8 @@ tags:
   - Hexo
   - 项目实战
 top_img: /img/bj.jpg
-cover: /img/4.jpg---
+cover: /img/4.jpg
+---
 
 ## 前言
 

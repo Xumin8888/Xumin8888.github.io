@@ -1,4 +1,4 @@
----
+﻿---
 title: React 电商项目实战
 date: 2026-06-15 09:00:00
 categories:
@@ -8,7 +8,8 @@ tags:
   - 电商
   - 项目实战
 top_img: /img/bj.jpg
-cover: /img/2.jpg---
+cover: /img/2.jpg
+---
 
 ## 项目概述
 
