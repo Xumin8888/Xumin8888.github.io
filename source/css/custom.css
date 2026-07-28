@@ -88,11 +88,15 @@
 
 #rightside > div > button,
 #rightside > div > a {
-  background: rgba(255, 255, 255, 0.85) !important;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: #000 !important;
+  color: #fff !important;
   border-radius: 10px !important;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#rightside > div > button i,
+#rightside > div > a i {
+  color: #fff !important;
 }
 
 #sidebar-menus {
@@ -199,5 +203,11 @@ div#note-container .note {
 
 [data-theme='dark'] #rightside > div > button,
 [data-theme='dark'] #rightside > div > a {
-  background: rgba(28, 28, 28, 0.85) !important;
+  background: #000 !important;
+  color: #fff !important;
+}
+
+[data-theme='dark'] #rightside > div > button i,
+[data-theme='dark'] #rightside > div > a i {
+  color: #fff !important;
 }

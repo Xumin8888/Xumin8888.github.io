@@ -143,6 +143,20 @@
         sendMsg();
       });
     });
+
+    function toggleAiBtn() {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      if (scrollTop > 56) {
+        aiBtn.classList.add('show');
+      } else {
+        if (!isOpen) {
+          aiBtn.classList.remove('show');
+        }
+      }
+    }
+
+    window.addEventListener('scroll', toggleAiBtn, { passive: true });
+    toggleAiBtn();
   }
 
   if (document.readyState === 'loading') {
