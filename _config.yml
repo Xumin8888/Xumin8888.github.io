@@ -105,5 +105,5 @@ theme: butterfly
 ## 使用 GitHub Actions 自动部署，详见 .github/workflows/deploy.yml
 deploy:
   type: git
-  repo: git@github.com:Xumin8888/Xumin8888.github.io.git
+  repo: https://github.com/Xumin8888/Xumin8888.github.io.git
   branch: main
