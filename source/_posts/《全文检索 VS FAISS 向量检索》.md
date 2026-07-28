@@ -1,4 +1,4 @@
-﻿---
+---
 title: 全文检索 VS FAISS 向量检索
 date: 2026-06-03 00:30:00
 categories:

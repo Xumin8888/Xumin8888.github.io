@@ -45,11 +45,12 @@ menu:
     小游戏: /play/ || fas fa-gamepad
   关于我: /about/ || fas fa-user
   AI专栏||fas fa-robot:
-    开篇: /tags/开篇/ || fas fa-play-circle
-    实操: /tags/实操/ || fas fa-tools
-    实战: /tags/实战/ || fas fa-laptop-code
+    AI专栏: /categories/AI专栏/ || fas fa-robot
+    LangChain: /tags/LangChain/ || fas fa-link
+    RAG实战: /tags/RAG/ || fas fa-database
+    提示词: /tags/提示词/ || fas fa-magic
   面试专题||fas fa-briefcase:
-    简历指南: /tags/简历/ || fas fa-file-alt
+    简历指南: /tags/求职/ || fas fa-file-alt
     笔试题库: /tags/笔试/ || fas fa-pencil-alt
     面试题库: /tags/面试/ || fas fa-comments
 
@@ -429,7 +430,7 @@ aside:
     tag: true
     category: true
   card_author:
-    enable: true
+    enable: false
     description:
     button:
       enable: true

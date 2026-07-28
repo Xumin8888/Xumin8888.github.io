@@ -1,4 +1,4 @@
-﻿---
+---
 title: Hexo 博客性能优化实践指南
 date: 2026-07-01 09:00:00
 categories:
